@@ -10,7 +10,7 @@ pipeline {
     stages {
         /* We do not need a stage for checkout here since it is done by default when using "Pipeline script from SCM" option. */
         
-        stage('Build') {
+        stage('BuildStage') {
             steps {
                 echo 'Building..'
                 sh 'docker image build -t $DOCKER_HUB_REPO:latest .'
